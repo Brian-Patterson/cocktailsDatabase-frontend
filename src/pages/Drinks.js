@@ -10,6 +10,7 @@ const Drinks = (props) => {
     const getDrinks = async () => {
         try{
             const response = await fetch(BASE_URL)
+            console.log(response)
             const allDrinks = await response.json()
             setDrinks(allDrinks)
         } catch(err) {
