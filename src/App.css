@@ -219,10 +219,11 @@
 
   .leftBar {
     grid-row: 1;
+    background-color: gainsboro;
   }
 
   .drinklersList {
-    grid-column: 3/span 3;
+    grid-column: 5/span 3;
     grid-row: 1;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

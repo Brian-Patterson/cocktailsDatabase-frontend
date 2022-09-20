@@ -21,23 +21,103 @@ const Drinks = (props) => {
     useEffect (() => {getDrinks()}, []);
 
     // console.log(`${drinks.drinks.length} drinks`)
-    console.log(drinks.drinks)
+    // console.log(drinks.drinks[1].strDrink)
     // console.log(typeof drinks);
     // console.log(typeof drinks.drinks);
     // console.log(typeof drinks.drinks[1])
     // console.log(drinks.drinks[1])   
 
+    function getRandomInt() {
+        return Math.floor(Math.random() * 100);
+      }
+
+    console.log(drinks)
     const loaded = () => {
-        return drinks.drinks?.map((drinks, index) => {
+            let index = 0;
             return (
-                <Link to={`/drinks/${index}`}>
-                <div key={index} className={`drink_${index}`}>
-                    <h1>{drinks.strDrink}</h1>
-                    <img src={`${drinks.strDrinkThumb}`} alt={`${drinks.strDrink}`} className="indexImg"/>
-                </div>
-                </Link>
-            );
-        });
+            <div>
+                <section className="rand1">
+                    {index = getRandomInt()}
+                    <Link to={`/drinks/${index}`}>
+                        <div key={index} className={`{randIndex}`}>
+                            <h1>{drinks.drinks[index].strDrink}</h1>
+                            <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>
+                        </div>
+                    </Link>
+                </section>
+                <section className="rand2">
+                    {index = getRandomInt()}
+                    <Link to={`/drinks/${index}`}>
+                        <div key={index} className={`{randIndex}`}>
+                            <h1>{drinks.drinks[index].strDrink}</h1>
+                            <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>
+                        </div>
+                    </Link>
+                </section>
+                <section className="rand3">
+                    {index = getRandomInt()}
+                    <Link to={`/drinks/${index}`}>
+                        <div key={index} className={`{randIndex}`}>
+                            <h1>{drinks.drinks[index].strDrink}</h1>
+                            <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>
+                        </div>
+                    </Link>
+                </section>
+                <section className="rand4">
+                    {index = getRandomInt()}
+                    <Link to={`/drinks/${index}`}>
+                        <div key={index} className={`{randIndex}`}>
+                            <h1>{drinks.drinks[index].strDrink}</h1>
+                            <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>
+                        </div>
+                    </Link>
+                </section>
+                <section className="rand5">
+                    {index = getRandomInt()}
+                    <Link to={`/drinks/${index}`}>
+                        <div key={index} className={`{randIndex}`}>
+                            <h1>{drinks.drinks[index].strDrink}</h1>
+                            <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>
+                        </div>
+                    </Link>
+                </section>
+            </div>
+        )
+
+
+        // return drinks.drinks?.map((drinks, index) => {
+        //     return (
+        //         <Link to={`/drinks/${getRandomInt()}`}>
+        //         <div key={index} className={`drink_${index}`}>
+        //             <h1>{drinks.strDrink}</h1>
+        //             <img src={`${drinks.strDrinkThumb}`} alt={`${drinks.strDrink}`} className="indexImg"/>
+        //         </div>
+        //         </Link>
+        //     );
+        // })
+
+                // let randArr = [];
+        // for(let i=0; i<5; i++) {
+        //     let index = getRandomInt();
+        //     console.log(typeof index);
+        //     let drink_i = 
+        //     '<Link to={`/drinks/${index}`}>' +
+        //         '<div key={index} className={randIndex}>' +
+        //             '<h1>{`drinks.drinks[${index}`.strDrink}</h1>' +
+        //             '<img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>' +
+        //         '</div>' +
+        //     '</Link>'
+        //     randArr.push(drink_i)
+        // };
+        // console.log(randArr[0])
+        
+        //     randArr.map((element) => {
+        //         return (
+        //             <div>
+        //             {element}
+        //             </div>
+        //         )
+        //     })
     };
   
         
@@ -56,15 +136,15 @@ const Drinks = (props) => {
                 {drinks ? loaded(): loading()}
             </div>
             <nav className="leftBar">
-            {drinks.drinks?.map((drinks, index) => {
-            return (
-                <Link to={`/drinks/${index}`}>
-                <div key={index}>
-                    <h1>{drinks.strDrink}</h1>
-                </div>
-                </Link>
-                );
-            })};
+                {drinks.drinks?.map((drinks, index) => {
+                    return (
+                        <Link to={`/drinks/${index}`}>
+                        <div key={index}>
+                            <h1>{drinks.strDrink}</h1>
+                        </div>
+                        </Link>
+                    );
+                })};
             </nav>
         </section>
     )
