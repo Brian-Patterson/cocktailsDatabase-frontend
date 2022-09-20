@@ -2,6 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router'
 
+
 const ShowDrinks = (props) => {
 
     const [drink, setDrink] = useState(null);
@@ -41,19 +42,54 @@ const ShowDrinks = (props) => {
     }
     if (!ingredient) {
       return <p>loading ingredient...</p>
+    } 
+    let i=1
+    const ingredientObj = `strIngredient1`
+    console.log(ingredientObj)
+    const listIngredients = () => {
+      for(let i=1; i<=15; i++) {
+         return (
+          
+            <h3>{ingredient.drinks[0].strIngredient1}</h3>
+          
+         )
+      }
     }
 
+  
+
+    console.log(listIngredients())
+    console.log(ingredient)
+    let num = 2
     console.log(ingredient.drinks[0].strIngredient1)
 
-    return (
+    return(
       <div>
         <h1>{drink.strDrink}</h1>
         <img src={`${drink.strDrinkThumb}`} alt={`${drink.strDrink}`}/>
-        (property in ingredient.drinks[0])
-        <h3>{ingredient.drinks[0].strIngredient1}</h3>
+        {Object.keys(ingredient.drinks[0]).map((key, index) => {
+          return (
+            <div key={index}>
+              
+              <h3>
+                {key.startsWith("strIngredient")?ingredient.drinks[0][key]:null}
+              </h3>
+              </div>
+          )
+        })}
       </div>
     )
-  }
-  
-  export default ShowDrinks
-  
+
+        
+        
+        // <h1>{listIngredients}</h1>
+        // {return(
+        // for(proptery in ingredient.drinks[0]) {
+        //   return(
+        //       <div>
+        //       <h3>{ingredient.strIngredient+`${index+1}`}</h3>
+        //      </div>
+        // )})}
+}
+
+export default ShowDrinks
