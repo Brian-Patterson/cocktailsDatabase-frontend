@@ -33,7 +33,8 @@ const ShowDrinks = (props) => {
     };
     
 
-    // console.log(drink.idDrink)
+    console.log(drink.idDrink)
+    console.log(ingredient)
     //if ingredients dont' load, comment out and recomment in above console.log
 
     useEffect(() => {fetchDrink()}, []);
@@ -47,12 +48,12 @@ const ShowDrinks = (props) => {
     }
 
     return(
-      <div>
-        <h1>{drink.strDrink}</h1>
-        <img src={`${drink.strDrinkThumb}`} alt={`${drink.strDrink}`}/>
+      <div className='showGrid'>
+        <h1 className='showDrinkName'>{drink.strDrink}</h1>
+        <img src={`${drink.strDrinkThumb}`} alt={`${drink.strDrink}`} className="showImg"/>
         {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={`ingredient_${index}`}>
               <h3>
                 {key.startsWith("strIngredient")?ingredient.drinks[0][key]:null}
               </h3>
@@ -61,7 +62,7 @@ const ShowDrinks = (props) => {
         })}
         {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={`showInstructions_${index}`}>
               <h3>
                 {key.startsWith("strInstructions")?ingredient.drinks[0][key]:null}
               </h3>
@@ -70,7 +71,7 @@ const ShowDrinks = (props) => {
         })}
         {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={`showMeassure_${index}`}>
               <h3>
                 {key.startsWith("strMeasure")?ingredient.drinks[0][key]:null}
               </h3>
@@ -79,7 +80,7 @@ const ShowDrinks = (props) => {
         })}
         {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={`showAlcoholic_${index}`}>
               <h3>
                 {key.startsWith("strAlcoholic")?ingredient.drinks[0][key]:null}
               </h3>
@@ -88,7 +89,7 @@ const ShowDrinks = (props) => {
         })}
           {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={`showCategory_${index}`}>
               <h3>
                 {key.startsWith("strCategory")?ingredient.drinks[0][key]:null}
               </h3>
@@ -97,7 +98,7 @@ const ShowDrinks = (props) => {
         })}
         {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index}>
+            <div key={index} className={`showGlass_${index}`}>
               <h3>
                 {key.startsWith("strGlass")?ingredient.drinks[0][key]:null}
               </h3>

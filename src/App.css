@@ -1,9 +1,10 @@
 @media (max-width: 480px) {
   body {
-    background-color: mediumaquamarine;
-    display: grid;
+    background-color: white;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: auto; */
+    text-align: center;
   }
 
   .drinksSection{
@@ -27,12 +28,152 @@
     padding-left: 20px;
   }
 
-  .drinksSection > * {
-    text-align: center;
-    justify-items: center;
-    
+  .showGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
   }
 
+  .showDrinkName {
+    grid-column: 1/span 3;
+    grid-row: 1
+  }
+
+  .showImg {
+    width: 375px;
+    grid-column: 1/span 3;
+    grid-row: 2;
+  }
+
+  .ingredient_17 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .ingredient_18 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .ingredient_19 {
+    grid-column: 1;
+    grid-row: 6
+  }
+
+  .ingredient_20 {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .ingredient_21 {
+    grid-column: 1;
+    grid-row: 8;
+  }
+
+  .ingredient_22 {
+    grid-column: 1;
+    grid-row: 9;
+  }
+
+  .ingredient_23 {
+    grid-column: 1;
+    grid-row: 10;
+  }
+
+  .ingredient_24 {
+    grid-column: 1;
+    grid-row: 11;
+  }
+
+  .ingredient_25 {
+    grid-column: 1;
+    grid-row: 12;
+  }
+
+  .showMeassure_32 {
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  .showMeassure_33 {
+    grid-column: 3;
+    grid-row: 5;
+  }
+
+  .showMeassure_34 {
+    grid-column: 3;
+    grid-row: 6;
+  }
+
+  .showMeassure_35 {
+    grid-column: 3;
+    grid-row: 7;
+  }
+
+  .showMeassure_36 {
+    grid-column: 3;
+    grid-row: 8;
+  }
+
+  .showMeassure_37 {
+    grid-column: 3;
+    grid-row: 9;
+  }
+
+  .showMeassure_38 {
+    grid-column: 3;
+    grid-row: 10;
+  }
+
+  .showMeassure_39 {
+    grid-column: 3;
+    grid-row: 11;
+  }
+
+  .showMeassure_40 {
+    grid-column: 3;
+    grid-row: 12;
+  }
+
+  .drinksSection > * {
+    text-align: center;
+    justify-items: center; 
+  }
+
+  .showInstructions_9 {
+    grid-column: 1/span 3;
+    grid-row: 14;
+  }
+
+  .showInstructions_10 {
+    grid-column: 1/span 3;
+    grid-row: 15;
+  }
+
+  .showInstructions_11 {
+    grid-column: 1/span 3;
+    grid-row: 16;
+  }
+
+  .showInstructions_13 {
+    grid-column: 1/span 3;
+    grid-row: 17;
+  }
+
+  .showAlcoholic_7 {
+    grid-column: 1;
+    grid-row: 18;
+  }
+
+  .showCategory_5 {
+    grid-column: 1;
+    grid-row: 19;
+  }
+  
+  .showGlass_8 {
+    grid-column: 1;
+    grid-row: 20;
+  }
 
   .drink_1 {
     color: goldenrod;
@@ -55,3 +196,203 @@
 .App-link {
   color: #61dafb;
 }
+
+
+  body {
+    background-color: white;
+    text-align: center;
+  }
+
+  .drinksSection{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    font-size: 12px;
+    margin: 5px;
+    gap: 5px;
+    height: 200px;
+    width: 200px;
+    justify-items: center;
+    align-items: flex-end;
+    grid-column: 2;
+  }
+
+  .leftBar {
+    grid-row: 1;
+  }
+
+  .drinklersList {
+    grid-column: 3/span 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    font-size: 12px;
+    margin: 5px;
+    gap: 5px;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    justify-items: center;
+    align-items: flex-end;
+    align-self: flex-start;
+  }
+
+  .indexImg {
+    width: 100px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding-left: 20px;
+  }
+
+  .showGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .showDrinkName {
+    grid-column: 1/span 3;
+    grid-row: 1;
+  }
+
+  .showImg {
+    width: 375px;
+    grid-column: 1/span 3;
+    grid-row: 2;
+  }
+
+  .ingredient_17 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .ingredient_18 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .ingredient_19 {
+    grid-column: 1;
+    grid-row: 6
+  }
+
+  .ingredient_20 {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .ingredient_21 {
+    grid-column: 1;
+    grid-row: 8;
+  }
+
+  .ingredient_22 {
+    grid-column: 1;
+    grid-row: 9;
+  }
+
+  .ingredient_23 {
+    grid-column: 1;
+    grid-row: 10;
+  }
+
+  .ingredient_24 {
+    grid-column: 1;
+    grid-row: 11;
+  }
+
+  .ingredient_25 {
+    grid-column: 1;
+    grid-row: 12;
+  }
+
+  .showMeassure_32 {
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  .showMeassure_33 {
+    grid-column: 3;
+    grid-row: 5;
+  }
+
+  .showMeassure_34 {
+    grid-column: 3;
+    grid-row: 6;
+  }
+
+  .showMeassure_35 {
+    grid-column: 3;
+    grid-row: 7;
+  }
+
+  .showMeassure_36 {
+    grid-column: 3;
+    grid-row: 8;
+  }
+
+  .showMeassure_37 {
+    grid-column: 3;
+    grid-row: 9;
+  }
+
+  .showMeassure_38 {
+    grid-column: 3;
+    grid-row: 10;
+  }
+
+  .showMeassure_39 {
+    grid-column: 3;
+    grid-row: 11;
+  }
+
+  .showMeassure_40 {
+    grid-column: 3;
+    grid-row: 12;
+  }
+
+  .drinksSection > * {
+    text-align: center;
+    justify-items: center; 
+  }
+
+  .showInstructions_9 {
+    grid-column: 1/span 3;
+    grid-row: 14;
+  }
+
+  .showInstructions_10 {
+    grid-column: 1/span 3;
+    grid-row: 15;
+  }
+
+  .showInstructions_11 {
+    grid-column: 1/span 3;
+    grid-row: 16;
+  }
+
+  .showInstructions_13 {
+    grid-column: 1/span 3;
+    grid-row: 17;
+  }
+
+  .showAlcoholic_7 {
+    grid-column: 1;
+    grid-row: 18;
+  }
+
+  .showCategory_5 {
+    grid-column: 1;
+    grid-row: 19;
+  }
+  
+  .showGlass_8 {
+    grid-column: 1;
+    grid-row: 20;
+  }
+
+  .drink_1 {
+    color: goldenrod;
+  }

@@ -52,7 +52,20 @@ const Drinks = (props) => {
 
     return (
         <section className="drinksSection">
-            {drinks ? loaded(): loading()}
+            <div className="drinklersList">
+                {drinks ? loaded(): loading()}
+            </div>
+            <nav className="leftBar">
+            {drinks.drinks?.map((drinks, index) => {
+            return (
+                <Link to={`/drinks/${index}`}>
+                <div key={index}>
+                    <h1>{drinks.strDrink}</h1>
+                </div>
+                </Link>
+                );
+            })};
+            </nav>
         </section>
     )
 }
