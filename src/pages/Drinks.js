@@ -31,8 +31,9 @@ const Drinks = (props) => {
         return drinks.drinks?.map((drinks, index) => {
             return (
                 <Link to={`/drinks/${index}`}>
-                <div key={index}>
+                <div key={index} className={`drink_${index}`}>
                     <h1>{drinks.strDrink}</h1>
+                    <img src={`${drinks.strDrinkThumb}`} alt={`${drinks.strDrink}`} className="indexImg"/>
                 </div>
                 </Link>
             );
@@ -50,7 +51,7 @@ const Drinks = (props) => {
     };
 
     return (
-        <section>
+        <section className="drinksSection">
             {drinks ? loaded(): loading()}
         </section>
     )

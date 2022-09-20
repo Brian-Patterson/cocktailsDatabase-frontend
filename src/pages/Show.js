@@ -33,7 +33,7 @@ const ShowDrinks = (props) => {
     };
     
 
-    console.log(drink.idDrink)
+    // console.log(drink.idDrink)
     //if ingredients dont' load, comment out and recomment in above console.log
 
     useEffect(() => {fetchDrink()}, []);
@@ -95,7 +95,7 @@ const ShowDrinks = (props) => {
             </div>
           )
         })}
-              {Object.keys(ingredient.drinks[0]).map((key, index) => {
+        {Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
             <div key={index}>
               <h3>
