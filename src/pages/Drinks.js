@@ -6,6 +6,10 @@ function getRandomInt() {
 }
 
 let index1 = getRandomInt()
+let index2 = getRandomInt()
+let index3 = getRandomInt()
+let index4 = getRandomInt()
+let index5 = getRandomInt()
 
 const Drinks = (props) => {
 
@@ -43,75 +47,75 @@ const Drinks = (props) => {
             console.log(err)
         }
     };
-    // console.log(drinks.drinks[index1].idDrink)
-    // const fetchIngredient2 = async() => {
-    //     let index = getRandomInt();
-    //     try{
-    //       const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index]}`)
-    //       const result = await response.json()
-    //       console.log(result)
-    //       setIngredient2(result)
-    //     }catch (err){
-    //       console.log(err)
-    //     }
-    // };
-    // const fetchIngredient3 = async() => {
-    //     let index = getRandomInt();
-    //     try{
-    //       const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index]}`)
-    //       const result = await response.json()
-    //       console.log(result)
-    //       setIngredient3(result)
-    //     }catch (err){
-    //       console.log(err)
-    //     }
-    // };
-    // const fetchIngredient4 = async() => {
-    //     let index = getRandomInt();
-    //     console.log(index)
-    //     try{
-    //       const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index]}`)
-    //       const result = await response.json()
-    //       console.log(result)
-    //       setIngredient4(result)
-    //     }catch (err){
-    //       console.log(err)
-    //     }
-    // };
-    // const fetchIngredient5 = async() => {
-    //     let index = getRandomInt();
-    //     try{
-    //       const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index]}`)
-    //       const result = await response.json()
-    //       console.log(result)
-    //       setIngredient5(result)
-    //     }catch (err){
-    //       console.log(err)
-    //     }
-    // };
+    const fetchIngredient2 = async() => {
+        try{
+            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index2].idDrink}`)
+            console.log(drinks.drinks[index2].idDrink)
+            const result = await response.json()
+            console.log(result)
+            setIngredient2(result)
+        }catch (err){
+            console.log(err)
+        }
+    };
+    const fetchIngredient3 = async() => {
+        try{
+            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index3].idDrink}`)
+            console.log(drinks.drinks[index3].idDrink)
+            const result = await response.json()
+            console.log(result)
+            setIngredient3(result)
+        }catch (err){
+            console.log(err)
+        }
+    };
+    const fetchIngredient4 = async() => {
+        try{
+            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index4].idDrink}`)
+            console.log(drinks.drinks[index4].idDrink)
+            const result = await response.json()
+            console.log(result)
+            setIngredient4(result)
+        }catch (err){
+            console.log(err)
+        }
+    };
+    const fetchIngredient5 = async() => {
+        try{
+            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index5].idDrink}`)
+            console.log(drinks.drinks[index5].idDrink)
+            const result = await response.json()
+            console.log(result)
+            setIngredient5(result)
+        }catch (err){
+            console.log(err)
+        }
+       };
+ 
 
     useEffect (() => {getDrinks()}, []);
     useEffect(() => {fetchIngredient1()},[drinks?.drinks]);
-    // useEffect(() => {fetchIngredient2()},[]);
-    // useEffect(() => {fetchIngredient3()},[]);
-    // useEffect(() => {fetchIngredient4()},[]);
-    // useEffect(() => {fetchIngredient5()},[]);
+    useEffect(() => {fetchIngredient2()},[drinks?.drinks]);
+    useEffect(() => {fetchIngredient3()},[drinks?.drinks]);
+    useEffect(() => {fetchIngredient4()},[drinks?.drinks]);
+    useEffect(() => {fetchIngredient5()},[drinks?.drinks]);
+
 
     if (!ingredient1) {
         return <p>loading ingredients...</p>
     } 
-    // if (!ingredient2) {
-    //     return <p>loading ingredients...</p>
-    // } 
-    // if (!ingredient3) {
-    //     return <p>loading ingredients...</p>
-    // } 
-    // if (!ingredient4) {
-    //     return <p>loading ingredients...</p>
-    // } 
-    // if (!ingredient5) {
-    //     return <p>loading ingredients...</p>
-    // } 
+    if (!ingredient2) {
+        return <p>loading ingredients...</p>
+    } 
+    if (!ingredient3) {
+        return <p>loading ingredients...</p>
+    } 
+    if (!ingredient4) {
+        return <p>loading ingredients...</p>
+    } 
+    if (!ingredient5) {
+        return <p>loading ingredients...</p>
+    } 
 
     console.log(ingredient1)
     console.log(index1)
@@ -119,18 +123,21 @@ const Drinks = (props) => {
     const loaded = () => {
 
             return (
-            <div className="drinklersList">
+            <div>
                 <section className="rand1 randy">
                     <Link to={`/drinks/${index1}`}>
-                        <div key={index1} className={`{randIndex1}`}>
+                        <div key={index1} className={`randIndex1 idxCard`}>
                             <h1>{ingredient1.drinks[0].strDrink}</h1>
-                            <img src={`${ingredient1.drinks[0].strDrinkThumb}`} alt={`${ingredient1.drinks[0].strDrink}`} className="indexImg"/>
+                            <img src={`${ingredient1.drinks[0].strDrinkThumb}`} alt={`${ingredient1.drinks[0].strDrink}`} className="indexImg indexImg1"/>
                             {ingredient1 && Object.keys(ingredient1.drinks[0]).map((key, index1) => {
                                 console.log(ingredient1.drinks[0])
                                 return (
-                                    <div key={index1} className={`ingredient1_${index1}`}>
+                                    <div key={index1} className={`ingredient_${index1}`}>
                                     <h3>
                                         {key.startsWith("strIngredient")?ingredient1.drinks[0][key]:null}
+                                    </h3>
+                                    <h3 className="idxMeasure1">
+                                        {key.startsWith("strMeasure")?ingredient1.drinks[0][key]:null}   
                                     </h3>
                                     </div>
                                 )
@@ -138,82 +145,94 @@ const Drinks = (props) => {
                         </div>
                     </Link>
                 </section>
-                {/* <section className="rand2 randy">
-                    Cocktail #{index = getRandomInt()}
-                    <Link to={`/drinks/${index}`}>
-                        <div key={index} className={`{randIndex}`}>
-                            {/* <h1>{drinks.drinks[index].strDrink}</h1>
-                            <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/> */}
+                <section className="rand2 randy">
+                    <Link to={`/drinks/${index2}`}>
+                        <div key={index2} className={`randIndex2 idxCard`}>
+                            <h1>{ingredient2.drinks[0].strDrink}</h1>
+                            <img src={`${ingredient2.drinks[0].strDrinkThumb}`} alt={`${ingredient2.drinks[0].strDrink}`} className="indexImg"/>
+                            {ingredient2 && Object.keys(ingredient2.drinks[0]).map((key, index2) => {
+                                console.log(ingredient2.drinks[0])
+                                return (
+                                    <div key={index2} className={`ingredient_${index2}`}>
+                                    <h3>
+                                        {key.startsWith("strIngredient")?ingredient2.drinks[0][key]:null}
+                                    </h3>
+                                    <h3 className="idxMeasure2">
+                                        {key.startsWith("strMeasure")?ingredient2.drinks[0][key]:null}   
+                                    </h3>
+                                    </div>
+                                )
+                            })}
                         </div>
-                //    </Link>
-                // </section> */}
-                // <section className="rand3 randy">
-                //     Cocktail #{index = getRandomInt()}
-                //     <Link to={`/drinks/${index}`}>
-                //         <div key={index} className={`{randIndex}`}>
-                //             {/* <h1>{drinks.drinks[index].strDrink}</h1>
-                //             <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/> */}
-                //         </div>
-                //     </Link>
-                // </section>
-                // <section className="rand4 randy">
-                //     Cocktail #{index = getRandomInt()}
-                //     <Link to={`/drinks/${index}`}>
-                //         <div key={index} className={`{randIndex}`}>
-                //             {/* <h1>{drinks.drinks[index].strDrink}</h1>
-                //             <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/> */}
-                //         </div>
-                //     </Link>
-                // </section>
-                // <section className="rand5 randy">
-                //     Cocktail #{index = getRandomInt()}
-                //     <Link to={`/drinks/${index}`}>
-                //         <div key={index} className={`{randIndex}`}>
-                //             {/* <h1>{drinks.drinks[index].strDrink}</h1>
-                //             <img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/> */}
-                //         </div>
-                //     </Link>
-                // </section>
-            // </div>
+                    </Link>
+                </section>
+                <section className="rand3 randy">
+                    <Link to={`/drinks/${index3}`}>
+                        <div key={index3} className={`randIndex3 idxCard`}>
+                            <h1>{ingredient3.drinks[0].strDrink}</h1>
+                            <img src={`${ingredient3.drinks[0].strDrinkThumb}`} alt={`${ingredient3.drinks[0].strDrink}`} className="indexImg"/>
+                            {ingredient3 && Object.keys(ingredient3.drinks[0]).map((key, index3) => {
+                                console.log(ingredient3.drinks[0])
+                                return (
+                                    <div key={index3} className={`ingredient_${index3}`}>
+                                    <h3>
+                                        {key.startsWith("strIngredient")?ingredient3.drinks[0][key]:null}
+                                    </h3>
+                                    <h3 className="idxMeasure3">
+                                        {key.startsWith("strMeasure")?ingredient3.drinks[0][key]:null}   
+                                    </h3>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </Link>
+                </section>
+                <section className="rand4 randy">
+                    <Link to={`/drinks/${index4}`}>
+                        <div key={index4} className={`randIndex4 idxCard`}>
+                            <h1>{ingredient4.drinks[0].strDrink}</h1>
+                            <img src={`${ingredient4.drinks[0].strDrinkThumb}`} alt={`${ingredient4.drinks[0].strDrink}`} className="indexImg"/>
+                            {ingredient4 && Object.keys(ingredient4.drinks[0]).map((key, index4) => {
+                                console.log(ingredient4.drinks[0])
+                                return (
+                                    <div key={index4} className={`ingredient_${index4}`}>
+                                    <h3>
+                                        {key.startsWith("strIngredient")?ingredient4.drinks[0][key]:null}
+                                    </h3>
+                                    <h3 className="idsMeasure4">
+                                        {key.startsWith("strMeasure")?ingredient4.drinks[0][key]:null}   
+                                    </h3>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </Link>
+                </section>
+                <section className="rand5 randy">
+                    <Link to={`/drinks/${index5}`}>
+                        <div key={index5} className={`randIndex5 idxCard`}>
+                            <h1>{ingredient5.drinks[0].strDrink}</h1>
+                            <img src={`${ingredient5.drinks[0].strDrinkThumb}`} alt={`${ingredient5.drinks[0].strDrink}`} className="indexImg"/>
+                            {ingredient5 && Object.keys(ingredient5.drinks[0]).map((key, index5) => {
+                                console.log(ingredient5.drinks[0])
+                                return (
+                                    <div key={index5} className={`ingredient_${index5}`}>
+                                    <h3>
+                                        {key.startsWith("strIngredient")?ingredient5.drinks[0][key]:null}
+                                    </h3>
+                                    <h3 className="idxMeasure5">
+                                        {key.startsWith("strMeasure")?ingredient5.drinks[0][key]:null}   
+                                    </h3>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </Link>
+                </section>
+            </div>
         )
-
-
-        // return drinks.drinks?.map((drinks, index) => {
-        //     return (
-        //         <Link to={`/drinks/${getRandomInt()}`}>
-        //         <div key={index} className={`drink_${index}`}>
-        //             <h1>{drinks.strDrink}</h1>
-        //             <img src={`${drinks.strDrinkThumb}`} alt={`${drinks.strDrink}`} className="indexImg"/>
-        //         </div>
-        //         </Link>
-        //     );
-        // })
-
-                // let randArr = [];
-        // for(let i=0; i<5; i++) {
-        //     let index = getRandomInt();
-        //     console.log(typeof index);
-        //     let drink_i = 
-        //     '<Link to={`/drinks/${index}`}>' +
-        //         '<div key={index} className={randIndex}>' +
-        //             '<h1>{`drinks.drinks[${index}`.strDrink}</h1>' +
-        //             '<img src={`${drinks.drinks[index].strDrinkThumb}`} alt={`${drinks.drinks[index].strDrink}`} className="indexImg"/>' +
-        //         '</div>' +
-        //     '</Link>'
-        //     randArr.push(drink_i)
-        // };
-        // console.log(randArr[0])
-        
-        //     randArr.map((element) => {
-        //         return (
-        //             <div>
-        //             {element}
-        //             </div>
-        //         )
-        //     })
     };
   
-        
     const loading = () => {
         console.log("loading");
             <section>
@@ -225,9 +244,7 @@ const Drinks = (props) => {
 
     return (
         <section className="drinksSection">
-            <div className="drinklersList">
-                {drinks.drinks ? loaded(): loading()}
-            </div>
+            {drinks.drinks ? loaded(): loading()}
             <nav className="leftBar">
                 {drinks.drinks?.map((drinks, index) => {
                     return (
