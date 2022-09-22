@@ -79,24 +79,6 @@ const ShowDrinks = (props) => {
         })}
         {ingredient && Object.keys(ingredient.drinks[0]).map((key, index) => {
           return (
-            <div key={index} className={`showAlcoholic_${index}`}>
-              <h3>
-                {key.startsWith("strAlcoholic")?ingredient.drinks[0][key]:null}
-              </h3>
-            </div>
-          )
-        })}
-          {ingredient && Object.keys(ingredient.drinks[0]).map((key, index) => {
-          return (
-            <div key={index} className={`showCategory_${index}`}>
-              <h3>
-                {key.startsWith("strCategory")?ingredient.drinks[0][key]:null}
-              </h3>
-            </div>
-          )
-        })}
-        {ingredient && Object.keys(ingredient.drinks[0]).map((key, index) => {
-          return (
             <div key={index} className={`showGlass_${index}`}>
               <h3>
                 {key.startsWith("strGlass")?ingredient.drinks[0][key]:null}

@@ -204,9 +204,13 @@
     text-align: center;
   }
 
+  .header:hover {
+    text-decoration: underline;
+  }
+
   .drinksSection{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 0.5fr);
     grid-template-rows: auto;
     font-size: 12px;
     margin: 5px;
@@ -219,11 +223,26 @@
   }
 
   .leftBar {
-    grid-row: 1;
+    grid-row: 1/span 5;
     background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
   }
 
-  .drinklersList {
+  .list {
+    color: black;
+  }
+
+  .list:hover {
+    text-decoration: underline 2px black;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  /* .drinklersList {
     grid-column: 5/span 3;
     grid-row: 1;
     display: grid;
@@ -238,136 +257,174 @@
     justify-items: center;
     align-items: flex-end;
     align-self: flex-start;
+  } */
+
+  .mainGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-column: 2;
+    grid-row: 1;
   }
 
-  .idxCard {
+  .idxCard{
     border: 5px solid black;
     margin-bottom: 50px;
-    width: 200%;
+    width: 88vw;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 0.1fr 1fr;
     grid-template-rows: auto;
-    margin: 20px;
+    margin-left: 20px;
+  }
+
+  .idxCard:hover {
+    border:5px solid goldenrod;
+  }
+
+  .rand2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .rand3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .rand4 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .rand5 {
+    grid-column: 1;
+    grid-row: 5;
   }
 
   .ingredient_17 {
-    grid-column: 2;
-    grid-row: 2;
-    color: gold;
-    display: flex;
-    justify-content: flex-end;
+    grid-column: 3;
+    grid-row: 1/span 3;
   }
 
   .ingredient_18 {
-    grid-column: 2;
-    grid-row: 4;
-    color: gold;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_19 {
-    grid-column: 2;
-    grid-row: 6;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_20 {
-    grid-column: 2;
-    grid-row: 7;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_21 {
-    grid-column: 2;
-    grid-row: 8;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_22 {
-    grid-column: 2;
-    grid-row: 9;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_23 {
-    grid-column: 2;
-    grid-row: 10;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_24 {
-    grid-column: 2;
-    grid-row: 11;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_25 {
-    grid-column: 2;
-    grid-row: 12;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .ingredient_32 {
     grid-column: 3;
     grid-row: 4;
   }
 
-  .ingredient_33 {
+  .ingredient_19 {
     grid-column: 3;
     grid-row: 5;
   }
 
-  .ingredient_34 {
-    grid-column: 3;
-    grid-row: 6;
-  }
-
-  .ingredient_35 {
+  .ingredient_20 {
     grid-column: 3;
     grid-row: 7;
   }
 
-  .ingredient_36 {
+  .ingredient_21 {
     grid-column: 3;
     grid-row: 8;
   }
 
-  .ingredient_37 {
+  .ingredient_22 {
     grid-column: 3;
     grid-row: 9;
   }
 
-  .ingredient_38 {
+  .ingredient_23 {
     grid-column: 3;
     grid-row: 10;
   }
 
-  .ingredient_39 {
+  .ingredient_24 {
     grid-column: 3;
     grid-row: 11;
   }
 
-  .ingredient_40 {
+  .ingredient_25 {
     grid-column: 3;
     grid-row: 12;
   }
+  .ingredient_26 {
+    grid-column: 2;
+    grid-row: 13;
+  }
+  .ingredient_27 {
+    grid-column: 2;
+    grid-row: 14;
+  }
+  .ingredient_28 {
+    grid-column: 2;
+    grid-row: 15;
+  }
+  .ingredient_29 {
+    grid-column: 2;
+    grid-row: 16;
+  }
+
+  .ingredient_32 {
+    grid-column: 4;
+    grid-row: 4;
+  }
+
+  .ingredient_33 {
+    grid-column: 4;
+    grid-row: 5;
+  }
+
+  .ingredient_34 {
+    grid-column: 4;
+    grid-row: 6;
+  }
+
+  .ingredient_35 {
+    grid-column: 4;
+    grid-row: 7;
+  }
+
+  .ingredient_36 {
+    grid-column: 4;
+    grid-row: 8;
+  }
+
+  .ingredient_37 {
+    grid-column: 4;
+    grid-row: 9;
+  }
+
+  .ingredient_38 {
+    grid-column: 4;
+    grid-row: 10;
+  }
+
+  .ingredient_39 {
+    grid-column: 4;
+    grid-row: 11;
+  }
+
+  .ingredient_40 {
+    grid-column: 4;
+    grid-row: 12;
+  }
+
+  .drinkName {
+    font-size: 35px;
+    margin-bottom: 0px;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/span 5;
+  }
 
   .indexImg {
-    width: 400px;
+    width: 450px;
     display: flex;
     align-self: center;
     justify-self: center;
-    padding-left: 20px;
+    padding-top: 60px;
+    padding-left: 40px;
     grid-column: 1;
-    grid-row: 2/span 7;
+    grid-row: 1/span 17;
+  }
+
+  .recipe {
+    font-size: 25px;
   }
 
   .showGrid {
@@ -382,9 +439,10 @@
   }
 
   .showImg {
-    width: 375px;
-    grid-column: 1/span 3;
-    grid-row: 2;
+    width: 500px;
+    grid-column: 1;
+    grid-row: 2/span 6;
+    padding-left: 35px;
   }
 
   .ingredient_17 {
@@ -484,22 +542,22 @@
 
   .showInstructions_9 {
     grid-column: 1/span 3;
-    grid-row: 14;
+    grid-row: 17;
   }
 
   .showInstructions_10 {
     grid-column: 1/span 3;
-    grid-row: 15;
+    grid-row: 18;
   }
 
   .showInstructions_11 {
     grid-column: 1/span 3;
-    grid-row: 16;
+    grid-row: 19;
   }
 
   .showInstructions_13 {
     grid-column: 1/span 3;
-    grid-row: 17;
+    grid-row: 20;
   }
 
   .showAlcoholic_7 {
@@ -514,7 +572,7 @@
   
   .showGlass_8 {
     grid-column: 1;
-    grid-row: 20;
+    grid-row: 11;
   }
 
   .drink_1 {

@@ -38,16 +38,16 @@ const Search = ()  => {
     //might need to change input to form for onSubmit funciton
 
     
-    const arrIdx = drinks.drinks.findIndex((element) => element = element.strDrink === "252");
+    const arrIdx = drinks.drinks?.findIndex((element) => element = element.strDrink === searchInput);
 
-    console.log(drinks.drinks)
-    console.log(drinks.drinks[5].strDrink)
-    console.log(arrIdx)
+    // console.log(drinks.drinks)
+    // console.log(drinks.drinks[5].strDrink)
+    // console.log(arrIdx)
 
     let handleSubmit = async (e) => {
         e.preventDefault();
         nav(`/drinks/${arrIdx}`)
-        console.log(arrIdx)
+        // console.log(arrIdx)
     }
 
   return (
@@ -58,7 +58,6 @@ const Search = ()  => {
             placeholder = "Cocktail Name"
             onChange = {handleChange}
             value = {searchInput}
-            
             />
             <button type="submit">SEARCH</button>
             

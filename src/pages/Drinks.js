@@ -123,16 +123,16 @@ const Drinks = (props) => {
     const loaded = () => {
 
             return (
-            <div>
+            <div className="mainGrid">
                 <section className="rand1 randy">
                     <Link to={`/drinks/${index1}`}>
                         <div key={index1} className={`randIndex1 idxCard`}>
-                            <h1>{ingredient1.drinks[0].strDrink}</h1>
+                            <h1 className="drinkName">{ingredient1.drinks[0].strDrink}</h1>
                             <img src={`${ingredient1.drinks[0].strDrinkThumb}`} alt={`${ingredient1.drinks[0].strDrink}`} className="indexImg indexImg1"/>
                             {ingredient1 && Object.keys(ingredient1.drinks[0]).map((key, index1) => {
                                 // console.log(ingredient1.drinks[0])
                                 return (
-                                    <div key={index1} className={`ingredient_${index1}`}>
+                                    <div key={index1} className={`ingredient_${index1} recipe`}>
                                     <h3>
                                         {key.startsWith("strIngredient")?ingredient1.drinks[0][key]:null}
                                     </h3>
@@ -148,12 +148,12 @@ const Drinks = (props) => {
                 <section className="rand2 randy">
                     <Link to={`/drinks/${index2}`}>
                         <div key={index2} className={`randIndex2 idxCard`}>
-                            <h1>{ingredient2.drinks[0].strDrink}</h1>
+                            <h1 className="drinkName">{ingredient2.drinks[0].strDrink}</h1>
                             <img src={`${ingredient2.drinks[0].strDrinkThumb}`} alt={`${ingredient2.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient2 && Object.keys(ingredient2.drinks[0]).map((key, index2) => {
                                 // console.log(ingredient2.drinks[0])
                                 return (
-                                    <div key={index2} className={`ingredient_${index2}`}>
+                                    <div key={index2} className={`ingredient_${index2} recipe`}>
                                     <h3>
                                         {key.startsWith("strIngredient")?ingredient2.drinks[0][key]:null}
                                     </h3>
@@ -169,12 +169,12 @@ const Drinks = (props) => {
                 <section className="rand3 randy">
                     <Link to={`/drinks/${index3}`}>
                         <div key={index3} className={`randIndex3 idxCard`}>
-                            <h1>{ingredient3.drinks[0].strDrink}</h1>
+                            <h1 className="drinkName">{ingredient3.drinks[0].strDrink}</h1>
                             <img src={`${ingredient3.drinks[0].strDrinkThumb}`} alt={`${ingredient3.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient3 && Object.keys(ingredient3.drinks[0]).map((key, index3) => {
                                 // console.log(ingredient3.drinks[0])
                                 return (
-                                    <div key={index3} className={`ingredient_${index3}`}>
+                                    <div key={index3} className={`ingredient_${index3} recipe`}>
                                     <h3>
                                         {key.startsWith("strIngredient")?ingredient3.drinks[0][key]:null}
                                     </h3>
@@ -190,12 +190,12 @@ const Drinks = (props) => {
                 <section className="rand4 randy">
                     <Link to={`/drinks/${index4}`}>
                         <div key={index4} className={`randIndex4 idxCard`}>
-                            <h1>{ingredient4.drinks[0].strDrink}</h1>
+                            <h1 className="drinkName">{ingredient4.drinks[0].strDrink}</h1>
                             <img src={`${ingredient4.drinks[0].strDrinkThumb}`} alt={`${ingredient4.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient4 && Object.keys(ingredient4.drinks[0]).map((key, index4) => {
                                 // console.log(ingredient4.drinks[0])
                                 return (
-                                    <div key={index4} className={`ingredient_${index4}`}>
+                                    <div key={index4} className={`ingredient_${index4} recipe`}>
                                     <h3>
                                         {key.startsWith("strIngredient")?ingredient4.drinks[0][key]:null}
                                     </h3>
@@ -211,12 +211,12 @@ const Drinks = (props) => {
                 <section className="rand5 randy">
                     <Link to={`/drinks/${index5}`}>
                         <div key={index5} className={`randIndex5 idxCard`}>
-                            <h1>{ingredient5.drinks[0].strDrink}</h1>
+                            <h1 className="drinkName">{ingredient5.drinks[0].strDrink}</h1>
                             <img src={`${ingredient5.drinks[0].strDrinkThumb}`} alt={`${ingredient5.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient5 && Object.keys(ingredient5.drinks[0]).map((key, index5) => {
                                 // console.log(ingredient5.drinks[0])
                                 return (
-                                    <div key={index5} className={`ingredient_${index5}`}>
+                                    <div key={index5} className={`ingredient_${index5} recipe`}>
                                     <h3>
                                         {key.startsWith("strIngredient")?ingredient5.drinks[0][key]:null}
                                     </h3>
@@ -250,7 +250,7 @@ const Drinks = (props) => {
                     return (
                         <Link to={`/drinks/${index}`}>
                         <div key={index}>
-                            <h1>{drinks.strDrink}</h1>
+                            <h1 className="list">{drinks.strDrink}</h1>
                         </div>
                         </Link>
                     );
