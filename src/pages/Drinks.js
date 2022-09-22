@@ -49,7 +49,7 @@ const Drinks = (props) => {
         }
     };
     fetchIngredient1();
-    }, [drink?.idDrink, drink]);
+    }, [drinks?.idDrink, drinks]);
 
     useEffect(() => {
     const fetchIngredient2 = async() => {
@@ -64,7 +64,7 @@ const Drinks = (props) => {
         }
     };
     fetchIngredient2();
-    }, [drink?.idDrink, drink]);
+    }, [drinks?.idDrink, drinks]);
 
     useEffect(() => {
     const fetchIngredient3 = async() => {
@@ -79,7 +79,7 @@ const Drinks = (props) => {
         }
     };
     fetchIngredient3();
-    }, [drink?.idDrink, drink]);
+    }, [drinks?.idDrink, drinks]);
 
     useEffect(() => {
     const fetchIngredient4 = async() => {
@@ -94,7 +94,7 @@ const Drinks = (props) => {
         }
     };
     fetchIngredient4();
-    }, [drink?.idDrink, drink]);
+    }, [drinks?.idDrink, drinks]);
 
     useEffect(() => {
     const fetchIngredient5 = async() => {
@@ -109,7 +109,7 @@ const Drinks = (props) => {
         }
     };
        fetchIngredient5();
-    }, [drink?.idDrink, drink]);
+    }, [drinks?.idDrink, drinks]);
  
 
     useEffect (() => {getDrinks()}, []);
