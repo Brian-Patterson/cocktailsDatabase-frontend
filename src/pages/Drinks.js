@@ -256,6 +256,9 @@ const Drinks = (props) => {
                     );
                 })};
             </nav>
+            <div className='footer'>
+                <p>Special thanks to CocktailsDB @ <span className="tyLink"><a className="tyLink" href="https://www.thecocktaildb.com/">https://www.thecocktaildb.com/</a></span></p>
+            </div>
         </section>
     )
 }

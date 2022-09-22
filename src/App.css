@@ -205,7 +205,7 @@
   }
 
   .header:hover {
-    text-decoration: underline;
+    text-decoration: underline 4px goldenrod;
   }
 
   .drinksSection{
@@ -224,8 +224,8 @@
 
   .leftBar {
     grid-row: 1/span 5;
-    background-color: gainsboro;
     display: flex;
+    border: 1px solid black;
     flex-direction: column;
   }
 
@@ -234,7 +234,7 @@
   }
 
   .list:hover {
-    text-decoration: underline 2px black;
+    text-decoration: underline 3px goldenrod;
   }
 
   a {
@@ -575,6 +575,17 @@
     grid-row: 11;
   }
 
-  .drink_1 {
-    color: goldenrod;
+  .footer {
+    grid-column: 2;
+    grid-row: 5
+  }
+
+  .tyLink {
+    color: blue;
+    text-decoration: underline blue;
+  }
+
+  .showTyLink {
+    color: blue;
+    text-decoration: underline blue;
   }

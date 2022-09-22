@@ -86,6 +86,9 @@ const ShowDrinks = (props) => {
             </div>
           )
         })}
+        <div className='showFooter'>
+          <p>Special thanks to CocktailsDB @ <span className='showTyLink'><a className='showTyLink' href="https://www.thecocktaildb.com/">https://www.thecocktaildb.com/</a></span></p>
+        </div>
       </div>
     )
 }

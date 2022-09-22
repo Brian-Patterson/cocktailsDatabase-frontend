@@ -1,7 +1,8 @@
 import './App.css';
 import Header from "./components/Header";
 import Main from "./components/Main";
-import Search from "./components/Search"
+import Search from "./components/Search";
+// import Footer from "./components/Footer";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Search />
       <Main />
+      {/* <Footer /> */}
     </div>
   );
 }
