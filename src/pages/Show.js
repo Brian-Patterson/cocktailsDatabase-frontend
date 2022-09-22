@@ -21,7 +21,7 @@ const ShowDrinks = (props) => {
         }
       }; 
       fetchDrink();
-      }, []);
+      }, [id]);
     
     useEffect(() => {
     const fetchIngredient = async() => {
