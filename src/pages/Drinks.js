@@ -36,6 +36,7 @@ const Drinks = (props) => {
 
     // console.log(index1)
     // console.log(drinks.drinks[index1].idDrink)
+    useEffect(() => {
     const fetchIngredient1 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index1].idDrink}`)
@@ -47,6 +48,10 @@ const Drinks = (props) => {
             console.log(err)
         }
     };
+    fetchIngredient1();
+    }, [drink?.idDrink, drink]);
+
+    useEffect(() => {
     const fetchIngredient2 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index2].idDrink}`)
@@ -58,6 +63,10 @@ const Drinks = (props) => {
             console.log(err)
         }
     };
+    fetchIngredient2();
+    }, [drink?.idDrink, drink]);
+
+    useEffect(() => {
     const fetchIngredient3 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index3].idDrink}`)
@@ -69,6 +78,10 @@ const Drinks = (props) => {
             console.log(err)
         }
     };
+    fetchIngredient3();
+    }, [drink?.idDrink, drink]);
+
+    useEffect(() => {
     const fetchIngredient4 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index4].idDrink}`)
@@ -80,6 +93,10 @@ const Drinks = (props) => {
             console.log(err)
         }
     };
+    fetchIngredient4();
+    }, [drink?.idDrink, drink]);
+
+    useEffect(() => {
     const fetchIngredient5 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index5].idDrink}`)
@@ -90,15 +107,17 @@ const Drinks = (props) => {
         }catch (err){
             console.log(err)
         }
-       };
+    };
+       fetchIngredient5();
+    }, [drink?.idDrink, drink]);
  
 
     useEffect (() => {getDrinks()}, []);
-    useEffect(() => {fetchIngredient1()},[drinks?.drinks, fetchIngredient1]);
-    useEffect(() => {fetchIngredient2()},[drinks?.drinks, fetchIngredient2]);
-    useEffect(() => {fetchIngredient3()},[drinks?.drinks, fetchIngredient3]);
-    useEffect(() => {fetchIngredient4()},[drinks?.drinks, fetchIngredient4]);
-    useEffect(() => {fetchIngredient5()},[drinks?.drinks, fetchIngredient5]);
+    // useEffect(() => {fetchIngredient1()},[drinks?.drinks, fetchIngredient1]);
+    // useEffect(() => {fetchIngredient2()},[drinks?.drinks, fetchIngredient2]);
+    // useEffect(() => {fetchIngredient3()},[drinks?.drinks, fetchIngredient3]);
+    // useEffect(() => {fetchIngredient4()},[drinks?.drinks, fetchIngredient4]);
+    // useEffect(() => {fetchIngredient5()},[drinks?.drinks, fetchIngredient5]);
 
 
     if (!ingredient1) {
