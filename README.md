@@ -1,3 +1,22 @@
+Proj 3 - Cocktails Front-end Database with React
+
+Features: 
+  Randomized featurd cocktails on homepage; updates on page refresh
+  Readable sidebar listing available cocktails
+  Searchbar for user to find a specific cocktail, then navigating user to show page of cocktail
+  
+Challenges:
+  making multiple fetches to different JSON objects to display different pieces of connected data
+  making react wait for all data to be fetched before uploading page
+
+To be continued:
+  working search bar on show page, just just home page
+  refactor code to utilize promise.all and loops to reduce amount of code
+  restructure to make css straight-forward 
+
+
+
+---------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
