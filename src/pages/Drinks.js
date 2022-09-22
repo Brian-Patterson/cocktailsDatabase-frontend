@@ -25,7 +25,7 @@ const Drinks = (props) => {
     const getDrinks = async () => {
         try{
             const response = await fetch(BASE_URL)
-            console.log(response)
+            // console.log(response)
             const allDrinks = await response.json()
             setDrinks(allDrinks)
         } catch(err) {
@@ -34,14 +34,14 @@ const Drinks = (props) => {
     }
 
 
-    console.log(index1)
+    // console.log(index1)
     // console.log(drinks.drinks[index1].idDrink)
     const fetchIngredient1 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index1].idDrink}`)
-            console.log(drinks.drinks[index1].idDrink)
+            // console.log(drinks.drinks[index1].idDrink)
             const result = await response.json()
-            console.log(result)
+            // console.log(result)
             setIngredient1(result)
         }catch (err){
             console.log(err)
@@ -50,9 +50,9 @@ const Drinks = (props) => {
     const fetchIngredient2 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index2].idDrink}`)
-            console.log(drinks.drinks[index2].idDrink)
+            // console.log(drinks.drinks[index2].idDrink)
             const result = await response.json()
-            console.log(result)
+            // console.log(result)
             setIngredient2(result)
         }catch (err){
             console.log(err)
@@ -61,9 +61,9 @@ const Drinks = (props) => {
     const fetchIngredient3 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index3].idDrink}`)
-            console.log(drinks.drinks[index3].idDrink)
+            // console.log(drinks.drinks[index3].idDrink)
             const result = await response.json()
-            console.log(result)
+            // console.log(result)
             setIngredient3(result)
         }catch (err){
             console.log(err)
@@ -72,9 +72,9 @@ const Drinks = (props) => {
     const fetchIngredient4 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index4].idDrink}`)
-            console.log(drinks.drinks[index4].idDrink)
+            // console.log(drinks.drinks[index4].idDrink)
             const result = await response.json()
-            console.log(result)
+            // console.log(result)
             setIngredient4(result)
         }catch (err){
             console.log(err)
@@ -83,9 +83,9 @@ const Drinks = (props) => {
     const fetchIngredient5 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index5].idDrink}`)
-            console.log(drinks.drinks[index5].idDrink)
+            // console.log(drinks.drinks[index5].idDrink)
             const result = await response.json()
-            console.log(result)
+            // console.log(result)
             setIngredient5(result)
         }catch (err){
             console.log(err)
@@ -117,8 +117,8 @@ const Drinks = (props) => {
         return <p>loading ingredients...</p>
     } 
 
-    console.log(ingredient1)
-    console.log(index1)
+    // console.log(ingredient1)
+    // console.log(index1)
 
     const loaded = () => {
 
@@ -130,7 +130,7 @@ const Drinks = (props) => {
                             <h1>{ingredient1.drinks[0].strDrink}</h1>
                             <img src={`${ingredient1.drinks[0].strDrinkThumb}`} alt={`${ingredient1.drinks[0].strDrink}`} className="indexImg indexImg1"/>
                             {ingredient1 && Object.keys(ingredient1.drinks[0]).map((key, index1) => {
-                                console.log(ingredient1.drinks[0])
+                                // console.log(ingredient1.drinks[0])
                                 return (
                                     <div key={index1} className={`ingredient_${index1}`}>
                                     <h3>
@@ -151,7 +151,7 @@ const Drinks = (props) => {
                             <h1>{ingredient2.drinks[0].strDrink}</h1>
                             <img src={`${ingredient2.drinks[0].strDrinkThumb}`} alt={`${ingredient2.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient2 && Object.keys(ingredient2.drinks[0]).map((key, index2) => {
-                                console.log(ingredient2.drinks[0])
+                                // console.log(ingredient2.drinks[0])
                                 return (
                                     <div key={index2} className={`ingredient_${index2}`}>
                                     <h3>
@@ -172,7 +172,7 @@ const Drinks = (props) => {
                             <h1>{ingredient3.drinks[0].strDrink}</h1>
                             <img src={`${ingredient3.drinks[0].strDrinkThumb}`} alt={`${ingredient3.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient3 && Object.keys(ingredient3.drinks[0]).map((key, index3) => {
-                                console.log(ingredient3.drinks[0])
+                                // console.log(ingredient3.drinks[0])
                                 return (
                                     <div key={index3} className={`ingredient_${index3}`}>
                                     <h3>
@@ -193,7 +193,7 @@ const Drinks = (props) => {
                             <h1>{ingredient4.drinks[0].strDrink}</h1>
                             <img src={`${ingredient4.drinks[0].strDrinkThumb}`} alt={`${ingredient4.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient4 && Object.keys(ingredient4.drinks[0]).map((key, index4) => {
-                                console.log(ingredient4.drinks[0])
+                                // console.log(ingredient4.drinks[0])
                                 return (
                                     <div key={index4} className={`ingredient_${index4}`}>
                                     <h3>
@@ -214,7 +214,7 @@ const Drinks = (props) => {
                             <h1>{ingredient5.drinks[0].strDrink}</h1>
                             <img src={`${ingredient5.drinks[0].strDrinkThumb}`} alt={`${ingredient5.drinks[0].strDrink}`} className="indexImg"/>
                             {ingredient5 && Object.keys(ingredient5.drinks[0]).map((key, index5) => {
-                                console.log(ingredient5.drinks[0])
+                                // console.log(ingredient5.drinks[0])
                                 return (
                                     <div key={index5} className={`ingredient_${index5}`}>
                                     <h3>

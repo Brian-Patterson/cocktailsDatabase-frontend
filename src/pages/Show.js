@@ -8,7 +8,7 @@ const ShowDrinks = (props) => {
     const [drink, setDrink] = useState(null);
     const [ingredient, setIngredient] = useState(null)
     const {id} = useParams();
-    console.log({id}.id)
+    // console.log({id})
 
     const fetchDrink = async() => {
       try{
@@ -26,7 +26,7 @@ const ShowDrinks = (props) => {
         if(drink){
         const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink?.idDrink}`)
         const result = await response.json()
-        console.log(result)
+        // console.log(result)
         setIngredient(result)
         }
       }catch (err){
