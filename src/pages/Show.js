@@ -9,18 +9,21 @@ const ShowDrinks = (props) => {
     const [ingredient, setIngredient] = useState(null)
     const {id} = useParams();
     // console.log({id})
-
-    const fetchDrink = async() => {
-      try{
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`)
-        const result = await response.json()
-        // console.log(result)
-        setDrink(result.drinks[id])
-      } catch (err){
-          console.log(err)
-      }
-    };
-
+    useEffect(() => {
+      const fetchDrink = async() => {
+        try{
+          const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`)
+          const result = await response.json()
+          // console.log(result)
+          setDrink(result.drinks[id])
+        } catch (err){
+            console.log(err)
+        }
+      }; 
+      fetchDrink();
+      }, []);
+    
+    useEffect(() => {
     const fetchIngredient = async() => {
       try{
         if(drink){
@@ -33,13 +36,15 @@ const ShowDrinks = (props) => {
         console.log(err)
       }
     };
+    fetchIngredient();
+    }, []);
     
 
     // console.log(ingredient)
     //if ingredients dont' load, comment out and recomment in above console.log
 
-    useEffect(() => {fetchDrink()}, []);
-    useEffect(() => {fetchIngredient()},[drink?.idDrink]);
+    // useEffect(() => {fetchDrink()}, []);
+    // useEffect(() => {fetchIngredient()},[drink?.idDrink]);
 
     if (!drink) {
       return <p>loading drink...</p>
