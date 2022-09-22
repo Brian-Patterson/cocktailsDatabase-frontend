@@ -94,11 +94,11 @@ const Drinks = (props) => {
  
 
     useEffect (() => {getDrinks()}, []);
-    useEffect(() => {fetchIngredient1()},[drinks?.drinks]);
-    useEffect(() => {fetchIngredient2()},[drinks?.drinks]);
-    useEffect(() => {fetchIngredient3()},[drinks?.drinks]);
-    useEffect(() => {fetchIngredient4()},[drinks?.drinks]);
-    useEffect(() => {fetchIngredient5()},[drinks?.drinks]);
+    useEffect(() => {fetchIngredient1()},[drinks?.drinks, fetchIngredient1]);
+    useEffect(() => {fetchIngredient2()},[drinks?.drinks, fetchIngredient2]);
+    useEffect(() => {fetchIngredient3()},[drinks?.drinks, fetchIngredient3]);
+    useEffect(() => {fetchIngredient4()},[drinks?.drinks, fetchIngredient4]);
+    useEffect(() => {fetchIngredient5()},[drinks?.drinks, fetchIngredient5]);
 
 
     if (!ingredient1) {

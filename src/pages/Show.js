@@ -37,7 +37,7 @@ const ShowDrinks = (props) => {
       }
     };
     fetchIngredient();
-    }, [drink?.idDrink]);
+    }, [drink?.idDrink, drink]);
     
 
     // console.log(ingredient)
