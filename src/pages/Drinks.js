@@ -44,7 +44,7 @@ const Drinks = (props) => {
             
             setIngredient1(result)
         }catch (err){
-            
+            console.log(err)
         }
     };
     fetchIngredient1();
