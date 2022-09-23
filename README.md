@@ -26,6 +26,8 @@ To be continued:
     Refactor code to utilize promise.all and loops to reduce amount of code
   
     Restructure to make css straight-forward 
+    
+    Direct user when searching for a drink not in the db
 
 
 
