@@ -25,27 +25,26 @@ const Drinks = (props) => {
     const getDrinks = async () => {
         try{
             const response = await fetch(BASE_URL)
-            // console.log(response)
+       
             const allDrinks = await response.json()
             setDrinks(allDrinks)
         } catch(err) {
-            console.log(err)
+            
         }
     }
 
 
-    // console.log(index1)
-    // console.log(drinks.drinks[index1].idDrink)
+
     useEffect(() => {
     const fetchIngredient1 = async() => {
         try{
             const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index1].idDrink}`)
-            // console.log(drinks.drinks[index1].idDrink)
+            
             const result = await response.json()
-            // console.log(result)
+            
             setIngredient1(result)
         }catch (err){
-            console.log(err)
+            
         }
     };
     fetchIngredient1();
