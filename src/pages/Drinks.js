@@ -96,10 +96,23 @@ const Drinks = (props) => {
     try {
       const response = await fetch(BASE_URL);
 
-      const allDrinks = await response.json();
-      setDrinks(allDrinks);
-    } catch (err) {}
-  };
+// 
+//       const allDrinks = await response.json();
+//       setDrinks(allDrinks);
+//     } catch (err) {}
+//   };
+// 
+    const getDrinks = async () => {
+        try{
+            const response = await fetch(BASE_URL)
+       
+            const allDrinks = await response.json()
+            setDrinks(allDrinks)
+        } catch(err) {
+            
+        }
+    }
+ 
 
   useEffect(() => {
     const fetchIngredient1 = async () => {
@@ -108,12 +121,27 @@ const Drinks = (props) => {
           `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index1].idDrink}`
         );
 
-        const result = await response.json();
+// 
+//         const result = await response.json();
 
-        setIngredient1(result);
-      } catch (err) {
-        console.log(err);
-      }
+//         setIngredient1(result);
+//       } catch (err) {
+//         console.log(err);
+//       }
+// 
+
+    useEffect(() => {
+    const fetchIngredient1 = async() => {
+        try{
+            const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinks.drinks[index1].idDrink}`)
+            
+            const result = await response.json()
+            
+            setIngredient1(result)
+        }catch (err){
+            console.log(err)
+        }
+      
     };
     fetchIngredient1();
   }, [drinks?.idDrink, drinks]);
@@ -407,4 +435,6 @@ const Drinks = (props) => {
   );
 };
 
-export default Drinks;
+
+export default Drinks
+
