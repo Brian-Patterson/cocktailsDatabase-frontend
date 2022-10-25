@@ -31,7 +31,7 @@ const Search = () => {
 
   if (searchInput.length > 0) {
     drinks.drinks.filter((drink) => {
-      return drink.strDrink.match(searchInput.toLocaleLowerCase());
+      return drink.strDrink.toLowerCase().match(searchInput.toLowerCase());
     });
   }
 
@@ -41,7 +41,8 @@ const Search = () => {
   //might need to change input to form for onSubmit funciton
 
   const arrIdx = drinks.drinks?.findIndex(
-    (element) => (element = element.strDrink === searchInput)
+    (element) =>
+      (element = element.strDrink.toLowerCase() === searchInput.toLowerCase())
   );
 
   // console.log(drinks.drinks)
