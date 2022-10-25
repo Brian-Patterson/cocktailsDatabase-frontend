@@ -26,7 +26,7 @@
     align-self: center;
     justify-self: center;
     padding-left: 20px;
-    border-bottom: 5px solid black;
+    /* border-bottom: 5px solid black; */
   }
 
   .showGrid {
@@ -44,7 +44,7 @@
     width: 375px;
     grid-column: 1/span 3;
     grid-row: 2;
-    border-bottom: 5px solid black;
+    /* border-bottom: 5px solid black; */
   }
 
   .ingredient_17 {
@@ -270,7 +270,7 @@
   .idxCard{
     border: 5px solid black;
     margin-bottom: 50px;
-    width: 88vw;
+    width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr 0.1fr 1fr;
     grid-template-rows: auto;
