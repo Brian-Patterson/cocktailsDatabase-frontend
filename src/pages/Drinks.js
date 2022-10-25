@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useRandomCocktails } from "../lib/hooks/useRandomCocktails";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+// import { useRandomCocktails } from "../lib/hooks/useRandomCocktails";
+// import Button from "react-bootstrap/Button";
+// import Card from "react-bootstrap/Card";
 // const Drinks = (props) => {
 //   const [drinks, setDrinks] = useState({});
 //   const randomCocktails = useRandomCocktails(5);
