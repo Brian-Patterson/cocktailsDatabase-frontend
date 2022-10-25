@@ -31,7 +31,7 @@ const Search = () => {
 
   if (searchInput.length > 0) {
     drinks.drinks.filter((drink) => {
-      return drink.strDrink.match(searchInput);
+      return drink.strDrink.match(searchInput.toLocaleLowerCase());
     });
   }
 
