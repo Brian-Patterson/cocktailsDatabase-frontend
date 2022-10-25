@@ -26,13 +26,26 @@
     align-self: center;
     justify-self: center;
     padding-left: 20px;
+<<<<<<< HEAD
     /* border-bottom: 5px solid black; */
+=======
+>>>>>>> 9338b8ebd7e127955c8893a7220672dbc3c9c3ea
   }
 
   .showGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+  }
+
+  .idxCard{
+    border: 15px solid black;
+    margin-bottom: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.1fr 1fr;
+    grid-template-rows: auto;
+    margin-left: 20px;
   }
 
   .showDrinkName {
@@ -241,23 +254,6 @@
     text-decoration: none;
     color: black;
   }
-
-  /* .drinklersList {
-    grid-column: 5/span 3;
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    font-size: 12px;
-    margin: 5px;
-    gap: 5px;
-    height: 200px;
-    width: 200px;
-    text-align: center;
-    justify-items: center;
-    align-items: flex-end;
-    align-self: flex-start;
-  } */
 
   .mainGrid {
     display: grid;

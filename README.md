@@ -1,3 +1,38 @@
+Proj 3 - Cocktails Front-end Database with React
+
+NETLIFY LINK: https://proj-3-cocktails.netlify.app
+
+Features: 
+
+    Randomized featurd cocktails on homepage; updates on page refresh
+  
+    Readable sidebar listing available cocktails
+  
+    Searchbar for user to find a specific cocktail, then navigating user to show page of cocktail
+  
+  
+  
+Challenges:
+
+    Making multiple fetches to different JSON objects to display different pieces of connected data
+  
+    Making react wait for all data to be fetched before uploading page
+
+
+
+To be continued:
+
+    Working search bar on show page, just just home page
+  
+    Refactor code to utilize promise.all and loops to reduce amount of code
+  
+    Restructure to make css straight-forward 
+    
+    Direct user when searching for a drink not in the db
+
+
+
+---------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
